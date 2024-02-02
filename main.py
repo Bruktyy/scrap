@@ -16,7 +16,6 @@ def find_megamenu_links(url):
                 web_scrape_product_info(href)
     else:
         print("No links found with the specified class or id!")
-l
 def send_to_telegram(bot_token, chat_id, message, link=None, img_url=None):
     api_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     if img_url:
@@ -61,6 +60,6 @@ def web_scrape_product_info(url):
                      time.sleep(30)
     else:
         print("No Product Information Found!")
-if name == 'main':
+if __name__== '__main__':
     website_url = 'https://shega.com/'
     find_megamenu_links(website_url)
